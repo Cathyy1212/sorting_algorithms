@@ -1,29 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "sort.h"
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-    int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
-    size_t n = sizeof(array) / sizeof(array[0]);
-
-    print_array(array, n);
-    printf("\n");
-    quick_sort(array, n);
-    printf("\n");
-    print_array(array, n);
-    return (0);
-}
-root@21ba5621cbf6:/sorting_algorithms# cat 3-O
-O(nlog(n))
-O(nlog(n))
-O(n^2)
-root@21ba5621cbf6:/sorting_algorithms# cat 3-quick_sort.c
 #include "sort.h"
 
 void sw_int(int *a, int *b);
