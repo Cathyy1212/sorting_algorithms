@@ -7,11 +7,11 @@
  */
 void sw_int(int *a, int *b)
 {
-        int c;
+	int c;
 
-        c = *a;
-        *a = *b;
-        *b = c;
+	c = *a;
+	*a = *b;
+	*b = c;
 }
 
 /**
@@ -22,22 +22,22 @@ void sw_int(int *a, int *b)
  */
 void selection_sort(int *array, size_t size)
 {
-        int *a;
-        size_t i, j;
+	int *a;
+	size_t i, j;
 
-        if (array == NULL || size < 2)
-                return;
+	if (array == NULL || size < 2)
+		return;
 
-        for (i = 0; i < size - 1; i++)
-        {
-                a = array + i;
-                for (j = i + 1; j < size; j++)
-                        a = (array[j] < *a) ? (array + j) : a;
+	for (i = 0; i < size - 1; i++)
+	{
+		a = array + i;
+		for (j = i + 1; j < size; j++)
+			a = (array[j] < *a) ? (array + j) : a;
 
-                if ((array + i) != a)
-                {
-                        sw_int(array + i, a);
-                        print_array(array, size);
-                }
-        }
+		if ((array + i) != a)
+		{
+			sw_int(array + i, a);
+			print_array(array, size);
+		}
+	}
 }

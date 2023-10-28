@@ -7,11 +7,11 @@
  */
 void sw_int(int *a, int *b)
 {
-        int c;
+	int c;
 
-        c = *a;
-        *a = *b;
-        *b = c;
+	c = *a;
+	*a = *b;
+	*b = c;
 }
 
 /**
@@ -22,24 +22,24 @@ void sw_int(int *a, int *b)
  */
 void bubble_sort(int *array, size_t size)
 {
-        size_t i, lenght = size;
-        bool b = false;
+	size_t i, lenght = size;
+	bool b = false;
 
-        if (array == NULL || size < 2)
-                return;
+	if (array == NULL || size < 2)
+		return;
 
-        while (b == false)
-        {
-                b = true;
-                for (i = 0; i < lenght - 1; i++)
-                {
-                        if (array[i] > array[i + 1])
-                        {
-                                sw_int(array + i, array + i + 1);
-                                print_array(array, size);
-                                b = false;
-                        }
-                }
-                lenght--;
-        }
+	while (b == false)
+	{
+		b = true;
+		for (i = 0; i < lenght - 1; i++)
+		{
+			if (array[i] > array[i + 1])
+			{
+				sw_int(array + i, array + i + 1);
+				print_array(array, size);
+				b = false;
+			}
+		}
+		lenght--;
+	}
 }
